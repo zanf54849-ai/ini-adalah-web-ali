@@ -119,7 +119,7 @@
         <form action="{{ route(Route::currentRouteName()) }}" method="GET">
             <div class="d-flex border rounded-pill">
                 <input class="form-control border-0 rounded-pill w-100 py-3"
-                    type="text" name="q" value="{{ request('q') }}" placeholder="Cari produk...">
+                    type="text" name="q" value="{{ request('q') }}" placeholder="Search for products...">
                 <select class="form-select text-dark border-0 border-start rounded-0 p-3"
                         name="category" style="width: 200px;">
                     <option value="All Category">All Category</option>
