@@ -60,7 +60,7 @@ Route::get('/shop2', function (Request $request) {
     $products = collect();
 
     if ($search || ($category && $category !== 'All Category')) {
-        $products = DB::table('products2')
+        $products = DB::table('products')
             ->when($search, fn($q) => $q->where('name', 'like', "%{$search}%"))
             ->when($category && $category !== 'All Category', fn($q) => $q->where('category', $category))
             ->get();
@@ -77,7 +77,7 @@ Route::get('/shop3', function (Request $request) {
     $products = collect();
 
     if ($search || ($category && $category !== 'All Category')) {
-        $products = DB::table('products3')
+        $products = DB::table('products')
             ->when($search, fn($q) => $q->where('name', 'like', "%{$search}%"))
             ->when($category && $category !== 'All Category', fn($q) => $q->where('category', $category))
             ->get();
