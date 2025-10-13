@@ -44,6 +44,61 @@
 
 
 <!-- Topbar Start -->
+    <div class="container-fluid px-5 d-none border-bottom d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-4 text-center text-lg-start mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a href="#" class="text-muted me-2"> Help</a><small> / </small>
+                    <a href="#" class="text-muted mx-2"> Support</a><small> / </small>
+                    <a href="#" class="text-muted ms-2"> Contact</a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center d-flex align-items-center justify-content-center">
+                <small class="text-dark">Call Us:</small>
+                <a href="#" class="text-muted"> 0811-8128-571</a>
+            </div>
+
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle text-muted me-2" data-bs-toggle="dropdown"><small>
+                                USD</small></a>
+                        <div class="dropdown-menu rounded">
+                            <a href="#" class="dropdown-item"> Euro</a>
+                            <a href="#" class="dropdown-item"> Dolar</a>
+                        </div>
+                    </div>
+                    <!-- Dropdown Bahasa -->
+                    <div class="dropdown">
+  <a href="#" class="dropdown-toggle text-muted mx-2" data-bs-toggle="dropdown">
+    <small id="selected-lang">English</small>
+  </a>
+  <div class="dropdown-menu rounded">
+    <a href="#" class="dropdown-item" onclick="changeLanguage('id', 'Indonesia')">Indonesia</a>
+    <a href="#" class="dropdown-item" onclick="changeLanguage('en', 'English')">English</a>
+    <a href="#" class="dropdown-item" onclick="changeLanguage('tr', 'Turkish')">Turkish</a>
+    <a href="#" class="dropdown-item" onclick="changeLanguage('es', 'Spanish')">Spanish</a>
+    <a href="#" class="dropdown-item" onclick="changeLanguage('it', 'Italian')">Italian</a>
+  </div>
+</div>
+                    <!-- End Dropdown Bahasa -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle text-muted ms-2" data-bs-toggle="dropdown"><small><i
+                                    class="fa fa-home me-2"></i> My Dashboard</small></a>
+                        <div class="dropdown-menu rounded">
+                            <a href="#" class="dropdown-item"> Login</a>
+                            <a href="#" class="dropdown-item"> Wishlist</a>
+                            <a href="#" class="dropdown-item"> My Card</a>
+                            <a href="#" class="dropdown-item"> Notifications</a>
+                            <a href="#" class="dropdown-item"> Account Settings</a>
+                            <a href="#" class="dropdown-item"> My Account</a>
+                            <a href="#" class="dropdown-item"> Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="container-fluid px-5 py-4 d-none d-lg-block">
     <div class="row gx-0 align-items-center text-center">
         <div class="col-md-4 col-lg-3 text-center text-lg-start">
@@ -105,7 +160,6 @@
                 </div>
             @endif
         @else
-            </div>
         @endif
     </div>
 </div>
