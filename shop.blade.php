@@ -159,6 +159,12 @@
                     @endforeach
                 </div>
             @endif
+                    <!-- Spacer agar footer tidak nempel -->
+<div style="margin-bottom: 100px;"></div>
+</div> <!-- Tutup container kalau ada yang belum tertutup -->
+</div> <!-- Tutup row kalau masih terbuka -->
+</div> <!-- Tutup section utama produk -->
+
         @else
         @endif
     </div>
@@ -1160,11 +1166,14 @@
     <!-- Shop Page End -->
                 {{-- ✅ Tambahkan produk lainnya seperti sebelumnya --}}
             @endif
-        </div>
-    </div>
-</div>
+                </div> <!-- end .row -->
+            </div> <!-- end .tab-pane -->
+        </div> <!-- end .tab-content -->
+    </div> <!-- end .container -->
+</div> <!-- end .container-fluid -->
 
-    <!-- Product Banner Start -->
+<!-- Product Banner Start -->
+
     <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-4">
