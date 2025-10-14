@@ -1160,12 +1160,14 @@
     <!-- Shop Page End -->
     @endif
 
-        </div>
-    </div>
-</div>
- 
+                </div> <!-- end .row -->
+            </div> <!-- end .tab-pane -->
+        </div> <!-- end .tab-content -->
+    </div> <!-- end .container -->
+</div> <!-- end .container-fluid -->
 
-    <!-- Product Banner Start -->
+<!-- Product Banner Start -->
+
     <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-4">
@@ -1349,6 +1351,64 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+        <!-- ================= TRANSLATE SYSTEM START ================= -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'id,en,tr,es,it',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        const s = document.createElement('script');
+        s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.head.appendChild(s);
+
+        function changeLanguage(lang, label) {
+            const tryChange = () => {
+                const select = document.querySelector(".goog-te-combo");
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event("change"));
+                    document.getElementById("selected-lang").innerText = label;
+                    clearInterval(interval);
+                }
+            };
+            const interval = setInterval(tryChange, 500);
+            setTimeout(() => clearInterval(interval), 5000);
+        }
+
+        function hideTranslateBanner() {
+            const style = document.createElement('style');
+            style.innerHTML = `
+    .goog-logo-link, .goog-te-gadget span, .goog-te-banner-frame.skiptranslate,
+    .goog-te-balloon-frame, .goog-te-banner, #goog-gt-tt, .goog-te-balloon-frame,
+    .goog-text-highlight { display: none !important; }
+    body, html { top: 0px !important; margin-top: 0 !important; }
+  `;
+            document.head.appendChild(style);
+
+            const interval = setInterval(() => {
+                const iframe = document.querySelector("iframe.goog-te-banner-frame");
+                if (iframe) iframe.remove();
+                document.body.style.top = "0px";
+            }, 800);
+        }
+
+        document.addEventListener('DOMContentLoaded', hideTranslateBanner);
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const bannerFrame = document.querySelector('iframe.goog-te-banner-frame');
+                if (bannerFrame) bannerFrame.remove();
+                document.body.style.top = '0px';
+            }, 1000);
+        });
+    </script>
+
+    <!-- ================= TRANSLATE SYSTEM END ================= -->
 </body>
 
 </html>
