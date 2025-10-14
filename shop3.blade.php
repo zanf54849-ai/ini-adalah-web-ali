@@ -159,8 +159,15 @@
                     @endforeach
                 </div>
             @endif
+                    <!-- Spacer agar footer tidak nempel -->
+<div style="margin-bottom: 100px;"></div>
+</div> <!-- Tutup container kalau ada yang belum tertutup -->
+</div> <!-- Tutup row kalau masih terbuka -->
+</div> <!-- Tutup section utama produk -->
+
         @else
         @endif
+
     </div>
 </div>
 <!-- Topbar End -->
@@ -865,10 +872,10 @@
                                                 </div>
                                             </div>
                                             <div class="text-center rounded-bottom p-4">
-                                                <a href="#" class="d-block mb-2">Bag</a>
-                                                <a href="#" class="d-block h4">Leather Bag - Large <br></a>
-                                                <del class="me-2 fs-5">IDR300K</del>
-                                                <span class="text-primary fs-5">IDR250K</span>
+                                                <a href="#" class="d-block mb-2">Sweater</a>
+                                                <a href="#" class="d-block h4">Wash Sweater / Jeans / Bomber / Defender <br></a>
+                                                <del class="me-2 fs-5">IDR150K</del>
+                                                <span class="text-primary fs-5">IDR100K</span>
                                             </div>
                                         </div>
                                         <div
@@ -911,10 +918,10 @@
                                                 </div>
                                             </div>
                                             <div class="text-center rounded-bottom p-4">
-                                                <a href="#" class="d-block mb-2">Backpack</a>
-                                                <a href="#" class="d-block h4">Backpack/Carrier <br> Up 40 Liter </a>
-                                                <del class="me-2 fs-5">IDR250K</del>
-                                                <span class="text-primary fs-5">IDR200k</span>
+                                                <a href="#" class="d-block mb-2">Jackets</a>
+                                                <a href="#" class="d-block h4">Wash Leather Jackets</a>
+                                                <del class="me-2 fs-5">IDR200K</del>
+                                                <span class="text-primary fs-5">IDR150k</span>
                                             </div>
                                         </div>
                                         <div
@@ -956,10 +963,10 @@
                                                 </div>
                                             </div>
                                             <div class="text-center rounded-bottom p-4">
-                                                <a href="#" class="d-block mb-2">Backpack</a>
-                                                <a href="#" class="d-block h4">Backpack/Carrier <br> 20-30 Liter </a>
-                                                <del class="me-2 fs-5">IDR175K</del>
-                                                <span class="text-primary fs-5">IDR125K</span>
+                                                <a href="#" class="d-block mb-2">Stroller</a>
+                                                <a href="#" class="d-block h4">Wash Stroller</a>
+                                                <del class="me-2 fs-5">IDR300K</del>
+                                                <span class="text-primary fs-5">IDR250K</span>
                                             </div>
                                         </div>
                                         <div
@@ -1002,10 +1009,10 @@
                                                 </div>
                                             </div>
                                             <div class="text-center rounded-bottom p-4">
-                                                <a href="#" class="d-block mb-2">Bag</a>
-                                                <a href="#" class="d-block h4">Children's School Bags <br> </a>
-                                                <del class="me-2 fs-5">IDR100K</del>
-                                                <span class="text-primary fs-5">IDR70K</span>
+                                                <a href="#" class="d-block mb-2">Stroller</a>
+                                                <a href="#" class="d-block h4">Double Seat Stroller Cleaning</a>
+                                                <del class="me-2 fs-5">IDR500K</del>
+                                                <span class="text-primary fs-5">IDR400K</span>
                                             </div>
                                         </div>
                                         <div
@@ -1048,10 +1055,10 @@
                                                 </div>
                                             </div>
                                             <div class="text-center rounded-bottom p-4">
-                                                <a href="#" class="d-block mb-2">Seat</a>
-                                                <a href="#" class="d-block h4">Washing Baby Car Seats <br> </a>
-                                                <del class="me-2 fs-5">IDR250K</del>
-                                                <span class="text-primary fs-5">IDR200K</span>
+                                                <a href="#" class="d-block mb-2">Baby Box</a>
+                                                <a href="#" class="d-block h4">Baby Box / Infant Bed Cleaning</a>
+                                                <del class="me-2 fs-5">IDR350K</del>
+                                                <span class="text-primary fs-5">IDR300K</span>
                                             </div>
                                         </div>
                                         <div
@@ -1094,10 +1101,10 @@
                                                 </div>
                                             </div>
                                             <div class="text-center rounded-bottom p-4">
-                                                <a href="#" class="d-block mb-2">Pillow</a>
-                                                <a href="#" class="d-block h4">Baby Bolster Pillow <br> </a>
-                                                <del class="me-2 fs-5">IDR50K</del>
-                                                <span class="text-primary fs-5">IDR30K</span>
+                                                <a href="#" class="d-block mb-2">Chair</a>
+                                                <a href="#" class="d-block h4">High Chair Cleaning<br> </a>
+                                                <del class="me-2 fs-5">IDR250K</del>
+                                                <span class="text-primary fs-5">IDR200K</span>
                                             </div>
                                         </div>
                                         <div
@@ -1161,12 +1168,14 @@
     <!-- Shop Page End -->
     @endif
 
-        </div>
-    </div>
-</div>
+                </div> <!-- end .row -->
+            </div> <!-- end .tab-pane -->
+        </div> <!-- end .tab-content -->
+    </div> <!-- end .container -->
+</div> <!-- end .container-fluid -->
 
+<!-- Product Banner Start -->
 
-    <!-- Product Banner Start -->
     <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-4">
@@ -1350,6 +1359,64 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+        <!-- ================= TRANSLATE SYSTEM START ================= -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'id,en,tr,es,it',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        const s = document.createElement('script');
+        s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.head.appendChild(s);
+
+        function changeLanguage(lang, label) {
+            const tryChange = () => {
+                const select = document.querySelector(".goog-te-combo");
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event("change"));
+                    document.getElementById("selected-lang").innerText = label;
+                    clearInterval(interval);
+                }
+            };
+            const interval = setInterval(tryChange, 500);
+            setTimeout(() => clearInterval(interval), 5000);
+        }
+
+        function hideTranslateBanner() {
+            const style = document.createElement('style');
+            style.innerHTML = `
+    .goog-logo-link, .goog-te-gadget span, .goog-te-banner-frame.skiptranslate,
+    .goog-te-balloon-frame, .goog-te-banner, #goog-gt-tt, .goog-te-balloon-frame,
+    .goog-text-highlight { display: none !important; }
+    body, html { top: 0px !important; margin-top: 0 !important; }
+  `;
+            document.head.appendChild(style);
+
+            const interval = setInterval(() => {
+                const iframe = document.querySelector("iframe.goog-te-banner-frame");
+                if (iframe) iframe.remove();
+                document.body.style.top = "0px";
+            }, 800);
+        }
+
+        document.addEventListener('DOMContentLoaded', hideTranslateBanner);
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const bannerFrame = document.querySelector('iframe.goog-te-banner-frame');
+                if (bannerFrame) bannerFrame.remove();
+                document.body.style.top = '0px';
+            }, 1000);
+        });
+    </script>
+
+    <!-- ================= TRANSLATE SYSTEM END ================= -->
 </body>
 
 </html>
