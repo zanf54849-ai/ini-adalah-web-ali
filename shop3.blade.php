@@ -43,7 +43,7 @@
     <!-- Spinner End -->
 
 
-<!-- Topbar Start -->
+    <!-- Topbar Start -->
     <div class="container-fluid px-5 d-none border-bottom d-lg-block">
         <div class="row gx-0 align-items-center">
             <div class="col-lg-4 text-center text-lg-start mb-lg-0">
@@ -70,17 +70,17 @@
                     </div>
                     <!-- Dropdown Bahasa -->
                     <div class="dropdown">
-  <a href="#" class="dropdown-toggle text-muted mx-2" data-bs-toggle="dropdown">
-    <small id="selected-lang">English</small>
-  </a>
-  <div class="dropdown-menu rounded">
-    <a href="#" class="dropdown-item" onclick="changeLanguage('id', 'Indonesia')">Indonesia</a>
-    <a href="#" class="dropdown-item" onclick="changeLanguage('en', 'English')">English</a>
-    <a href="#" class="dropdown-item" onclick="changeLanguage('tr', 'Turkish')">Turkish</a>
-    <a href="#" class="dropdown-item" onclick="changeLanguage('es', 'Spanish')">Spanish</a>
-    <a href="#" class="dropdown-item" onclick="changeLanguage('it', 'Italian')">Italian</a>
-  </div>
-</div>
+                        <a href="#" class="dropdown-toggle text-muted mx-2" data-bs-toggle="dropdown">
+                            <small id="selected-lang">English</small>
+                        </a>
+                        <div class="dropdown-menu rounded">
+                            <a href="#" class="dropdown-item" onclick="changeLanguage('id', 'Indonesia')">Indonesia</a>
+                            <a href="#" class="dropdown-item" onclick="changeLanguage('en', 'English')">English</a>
+                            <a href="#" class="dropdown-item" onclick="changeLanguage('tr', 'Turkish')">Turkish</a>
+                            <a href="#" class="dropdown-item" onclick="changeLanguage('es', 'Spanish')">Spanish</a>
+                            <a href="#" class="dropdown-item" onclick="changeLanguage('it', 'Italian')">Italian</a>
+                        </div>
+                    </div>
                     <!-- End Dropdown Bahasa -->
                     <div class="dropdown">
                         <a href="#" class="dropdown-toggle text-muted ms-2" data-bs-toggle="dropdown"><small><i
@@ -100,7 +100,8 @@
         </div>
     </div>
 <div class="container-fluid px-5 py-4 d-none d-lg-block">
-    <div class="row gx-0 align-items-center text-center">
+    <!-- Row 1: Logo + Search Form -->
+    <div class="row gx-0 align-items-center">
         <div class="col-md-4 col-lg-3 text-center text-lg-start">
             <div class="d-inline-flex align-items-center">
                 <a href="" class="navbar-brand p-0">
@@ -113,64 +114,57 @@
             </div>
         </div>
 
-        {{-- Form pencarian --}}
-        <form action="{{ route(Route::currentRouteName()) }}" method="GET">
-            <div class="d-flex border rounded-pill">
-                <input class="form-control border-0 rounded-pill w-100 py-3"
-                    type="text" name="q" value="{{ request('q') }}" placeholder="Search for products...">
-                <select class="form-select text-dark border-0 border-start rounded-0 p-3"
+        <div class="col-md-8 col-lg-9">
+            <form action="{{ route(Route::currentRouteName()) }}" method="GET">
+                <div class="d-flex border rounded-pill">
+                    <input class="form-control border-0 rounded-pill w-100 py-3"
+                        type="text" name="q" value="{{ request('q') }}" placeholder="Search for products...">
+                    <select class="form-select text-dark border-0 border-start rounded-0 p-3"
                         name="category" style="width: 200px;">
-                    <option value="All Category">All Category</option>
-                    <option value="Category 1" {{ request('category') == 'Category 1' ? 'selected' : '' }}>Category 1</option>
-                    <option value="Category 2" {{ request('category') == 'Category 2' ? 'selected' : '' }}>Category 2</option>
-                    <option value="Category 3" {{ request('category') == 'Category 3' ? 'selected' : '' }}>Category 3</option>
-                    <option value="Category 4" {{ request('category') == 'Category 4' ? 'selected' : '' }}>Category 4</option>
-                </select>
-                <button type="submit" class="btn btn-primary rounded-pill py-3 px-5" style="border: 0;">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </form>
-
-        {{-- Hasil pencarian --}}
-        @if(request()->has('q') || request()->has('category'))
-            @if($products->isEmpty())
-                <div class="text-center py-5">
-                    <p class="text-muted">Tidak ada produk ditemukan 🔍</p>
+                        <option value="">All Category</option>
+                        <option value="Category 1" {{ request('category') == 'Category 1' ? 'selected' : '' }}>Category 1</option>
+                        <option value="Category 2" {{ request('category') == 'Category 2' ? 'selected' : '' }}>Category 2</option>
+                        <option value="Category 3" {{ request('category') == 'Category 3' ? 'selected' : '' }}>Category 3</option>
+                        <option value="Category 4" {{ request('category') == 'Category 4' ? 'selected' : '' }}>Category 4</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary rounded-pill py-3 px-5" style="border: 0;">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
-            @else
-                <div class="row mt-4">
-                    @foreach($products as $product)
-                        <div class="col-md-3 mb-4">
-                            <div class="card h-100 shadow-sm border-0">
-                                <img src="{{ asset($product->img ?? $product->image ?? 'img/no-image.png') }}" 
-                                     class="card-img-top" 
-                                     alt="{{ $product->name }}">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title text-dark fw-bold">{{ $product->name }}</h5>
-                                    <p class="text-muted mb-1">{{ $product->category }}</p>
-                                    <p class="text-primary fw-bold">
-                                        IDR{{ number_format($product->price, 0, ',', '.') }}K
-                                    </p>
-                                    <small>{{ $product->description }}</small>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            @endif
-                    <!-- Spacer agar footer tidak nempel -->
-<div style="margin-bottom: 100px;"></div>
-</div> <!-- Tutup container kalau ada yang belum tertutup -->
-</div> <!-- Tutup row kalau masih terbuka -->
-</div> <!-- Tutup section utama produk -->
-
+            </form>
+        </div>
+    </div> <!-- ✅ TUTUP ROW 1 DI SINI -->
+    
+    <!-- Row 2: Hasil Pencarian (PISAH DARI ROW 1) -->
+    @if(request()->has('q') || request()->has('category'))
+    <div class="row mt-4">
+        @if($products->isEmpty())
+        <div class="col-12 text-center py-5">
+            <p class="text-muted">Tidak ada produk ditemukan 🔍</p>
+        </div>
         @else
+        @foreach($products as $product)
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="{{ asset($product->img ?? $product->image ?? 'img/no-image.png') }}"
+                    class="card-img-top"
+                    alt="{{ $product->name }}">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-dark fw-bold">{{ $product->name }}</h5>
+                    <p class="text-muted mb-1">{{ $product->category }}</p>
+                    <p class="text-primary fw-bold">
+                        IDR{{ number_format($product->price, 0, ',', '.') }}K
+                    </p>
+                    <small>{{ $product->description }}</small>
+                </div>
+            </div>
+        </div>
+        @endforeach
         @endif
-
     </div>
+    @endif
 </div>
-<!-- Topbar End -->
+    <!-- Topbar End -->
 
 
     <!-- Navbar & Hero Start -->
@@ -285,11 +279,12 @@
                                 </div>
                             </div>
                         </div>
-<a href="https://wa.me/628118128571" target="_blank"
+                        <a href="https://wa.me/628118128571" target="_blank"
                             class="btn btn-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">
                             <i class="fa fa-mobile-alt me-2"></i> 0811-8128-571
                         </a>
                     </div>
+                </nav>
             </div>
         </div>
     </div>
@@ -632,97 +627,97 @@
                     <!-- Top Banner -->
 
 
-<!-- Search & Sort -->
-<div class="row g-4">
-    <div class="col-xl-7">
-        {{-- 🔍 Form pencarian --}}
-        <form action="{{ route(Route::currentRouteName()) }}#products" method="GET" class="w-100">
-            <div class="input-group w-100 mx-auto d-flex">
-                <input 
-                    type="search" 
-                    name="q" 
-                    class="form-control p-3" 
-                    placeholder="Search for products..." 
-                    value="{{ request('q') }}"
-                    aria-describedby="search-icon-1">
+                    <!-- Search & Sort -->
+                    <div class="row g-4">
+                        <div class="col-xl-7">
+                            {{-- 🔍 Form pencarian --}}
+                            <form action="{{ route(Route::currentRouteName()) }}#products" method="GET" class="w-100">
+                                <div class="input-group w-100 mx-auto d-flex">
+                                    <input
+                                        type="search"
+                                        name="q"
+                                        class="form-control p-3"
+                                        placeholder="Search for products..."
+                                        value="{{ request('q') }}"
+                                        aria-describedby="search-icon-1">
 
-                <button type="submit" class="input-group-text p-3 bg-primary text-white border-0" id="search-icon-1">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
-        </form>
-    </div>
-
-    <div class="col-xl-3 text-end">
-        <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between">
-            <label for="sort">Sort By:</label>
-            <select id="sort" name="sort" class="border-0 form-select-sm bg-light me-3">
-                <option value="">Default Sorting</option>
-                <option value="low" {{ request('sort') == 'low' ? 'selected' : '' }}>Low to High</option>
-                <option value="high" {{ request('sort') == 'high' ? 'selected' : '' }}>High to Low</option>
-                <option value="newness" {{ request('sort') == 'newness' ? 'selected' : '' }}>Newness</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="col-lg-4 col-xl-2">
-        <ul class="nav nav-pills d-inline-flex text-center py-2 px-2 rounded bg-light mb-4">
-            <li class="nav-item me-4">
-                <a class="bg-light" data-bs-toggle="pill" href="#tab-5">
-                    <i class="fas fa-th fa-3x text-primary"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="bg-light" data-bs-toggle="pill" href="#tab-6">
-                    <i class="fas fa-bars fa-3x text-primary"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-
-<!-- Products Tab Content -->
-<div id="products" class="tab-content mt-4">
-    <!-- Grid View -->
-    <div id="tab-5" class="tab-pane fade show p-0 active">
-        <div class="row g-4 product">
-
-            {{-- 🧩 Jika ada pencarian --}}
-            @if(!empty(request('q')))
-                @if($products->isEmpty())
-                    <div class="text-center py-5">
-                        <p class="text-muted">Tidak ada produk ditemukan 🔍</p>
-                    </div>
-                @else
-                    @foreach($products as $product)
-                        <div class="col-lg-4">
-                            <div class="product-item rounded wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="product-item-inner border rounded">
-                                    <div class="product-item-inner-item">
-                                        <img src="{{ asset($product->img) }}" class="img-fluid w-100 rounded-top product-img-fixed" alt="{{ $product->name }}">
-                                        <div class="product-details">
-                                            <a href="#"><i class="fa fa-eye fa-1x"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="text-center rounded-bottom p-4">
-                                        <a href="#" class="d-block mb-2">{{ $product->category ?? 'Produk' }}</a>
-                                        <a href="#" class="d-block h4">{{ $product->name }}</a>
-                                        <span class="text-primary fs-5">IDR{{ number_format($product->price, 0, ',', '.') }}K</span>
-                                    </div>
+                                    <button type="submit" class="input-group-text p-3 bg-primary text-white border-0" id="search-icon-1">
+                                        <i class="fa fa-search"></i>
+                                    </button>
                                 </div>
-                                <div class="product-item-add border border-top-0 rounded-bottom text-center p-4 pt-0">
-                                    <a href="{{ route('order.form') }}" class="btn btn-primary border-secondary rounded-pill py-2 px-4 mb-4">
-                                        <i class="fas fa-shopping-cart me-2"></i> Add To Cart
-                                    </a>
-                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-xl-3 text-end">
+                            <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between">
+                                <label for="sort">Sort By:</label>
+                                <select id="sort" name="sort" class="border-0 form-select-sm bg-light me-3">
+                                    <option value="">Default Sorting</option>
+                                    <option value="low" {{ request('sort') == 'low' ? 'selected' : '' }}>Low to High</option>
+                                    <option value="high" {{ request('sort') == 'high' ? 'selected' : '' }}>High to Low</option>
+                                    <option value="newness" {{ request('sort') == 'newness' ? 'selected' : '' }}>Newness</option>
+                                </select>
                             </div>
                         </div>
-                    @endforeach
-                @endif
 
-            {{-- 🧩 Jika belum mencari (tampilkan semua default produk statis) --}}
-            @else
+                        <div class="col-lg-4 col-xl-2">
+                            <ul class="nav nav-pills d-inline-flex text-center py-2 px-2 rounded bg-light mb-4">
+                                <li class="nav-item me-4">
+                                    <a class="bg-light" data-bs-toggle="pill" href="#tab-5">
+                                        <i class="fas fa-th fa-3x text-primary"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="bg-light" data-bs-toggle="pill" href="#tab-6">
+                                        <i class="fas fa-bars fa-3x text-primary"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Products Tab Content -->
+                    <div id="products" class="tab-content mt-4">
+                        <!-- Grid View -->
+                        <div id="tab-5" class="tab-pane fade show p-0 active">
+                            <div class="row g-4 product">
+
+                                {{-- 🧩 Jika ada pencarian --}}
+                                @if(!empty(request('q')))
+                                @if($products->isEmpty())
+                                <div class="text-center py-5">
+                                    <p class="text-muted">Tidak ada produk ditemukan 🔍</p>
+                                </div>
+                                @else
+                                @foreach($products as $product)
+                                <div class="col-lg-4">
+                                    <div class="product-item rounded wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="product-item-inner border rounded">
+                                            <div class="product-item-inner-item">
+                                                <img src="{{ asset($product->img) }}" class="img-fluid w-100 rounded-top product-img-fixed" alt="{{ $product->name }}">
+                                                <div class="product-details">
+                                                    <a href="#"><i class="fa fa-eye fa-1x"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="text-center rounded-bottom p-4">
+                                                <a href="#" class="d-block mb-2">{{ $product->category ?? 'Produk' }}</a>
+                                                <a href="#" class="d-block h4">{{ $product->name }}</a>
+                                                <span class="text-primary fs-5">IDR{{ number_format($product->price, 0, ',', '.') }}K</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-item-add border border-top-0 rounded-bottom text-center p-4 pt-0">
+                                            <a href="{{ route('order.form') }}" class="btn btn-primary border-secondary rounded-pill py-2 px-4 mb-4">
+                                                <i class="fas fa-shopping-cart me-2"></i> Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                                @endif
+
+                                {{-- 🧩 Jika belum mencari (tampilkan semua default produk statis) --}}
+                                @else
                                 <!-- Product 1 -->
                                 <div class="col-lg-4">
                                     <div class="product-item rounded wow fadeInUp" data-wow-delay="0.1s">
@@ -1141,16 +1136,18 @@
                                 <!-- Pagination -->
                                 <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="pagination d-flex justify-content-center mt-5">
-                                        <a href="/shop?page=prev" class="rounded">&laquo;</a>
-                                        <a href="/shop?page=1" class="rounded">1</a>
+                                        <a href="{{ route('shop2') }}" class="rounded">&laquo;</a>
+                                        <a href="{{ route('shop') }}" class="rounded">1</a>
                                         <a href="{{ route('shop2') }}" class="rounded">2</a>
                                         <a href="{{ route('shop3') }}" class="active rounded">3</a>
-                                        <a href="/shop?page=4" class="rounded">4</a>
-                                        <a href="/shop?page=5" class="rounded">5</a>
-                                        <a href="/shop?page=6" class="rounded">6</a>
-                                        <a href="/shop?page=next" class="rounded">&raquo;</a>
+                                        <a href="{{ route('shop') }}?page=4" class="rounded">4</a>
+                                        <a href="{{ route('shop') }}?page=5" class="rounded">5</a>
+                                        <a href="{{ route('shop') }}?page=6" class="rounded">6</a>
+                                        <a href="{{ route('shop') }}?page=4" class="rounded">&raquo;</a>
                                     </div>
                                 </div>
+
+                                @endif
                             </div>
                         </div>
 
@@ -1166,16 +1163,8 @@
         </div>
     </div>
     <!-- Shop Page End -->
-    @endif
 
-                </div> <!-- end .row -->
-            </div> <!-- end .tab-pane -->
-        </div> <!-- end .tab-content -->
-    </div> <!-- end .container -->
-</div> <!-- end .container-fluid -->
-
-<!-- Product Banner Start -->
-
+    <!-- Product Banner Start -->
     <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-4">
@@ -1359,7 +1348,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-        <!-- ================= TRANSLATE SYSTEM START ================= -->
+    <!-- ================= TRANSLATE SYSTEM START ================= -->
     <div id="google_translate_element" style="display:none;"></div>
 
     <script>
