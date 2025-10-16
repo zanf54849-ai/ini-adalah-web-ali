@@ -2222,7 +2222,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             <!-- <div class="row g-5">
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
@@ -2274,8 +2273,8 @@
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Track Your Order</a>
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Track Your Order</a>
                     </div>
-                </div>
-            </div> -->
+                </div>-->
+            </div>
         </div>
     </div>
     <!-- Footer End -->
