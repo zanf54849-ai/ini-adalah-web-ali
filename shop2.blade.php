@@ -701,6 +701,7 @@
                                         <a href="#" class="d-block mb-2">{{ $product->category ?? 'Produk' }}</a>
                                         <a href="#" class="d-block h4">{{ $product->name }}</a>
                                         <span class="text-primary fs-5">IDR{{ number_format($product->price, 0, ',', '.') }}K</span>
+                                        <small>{{ $product->description }}</small>
                                     </div>
                                 </div>
                                 <div class="product-item-add border border-top-0 rounded-bottom text-center p-4 pt-0">
@@ -1133,42 +1134,35 @@
                                 <!-- Pagination -->
                                 <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="pagination d-flex justify-content-center mt-5">
-                                        <a href="/shop?page=prev" class="rounded">&laquo;</a>
-                                        <a href="/shop?page=1" class="rounded">1</a>
+                                        <a href="{{ route('shop') }}" class="rounded">&laquo;</a>
+                                        <a href="{{ route('shop') }}" class="rounded">1</a>
                                         <a href="{{ route('shop2') }}" class="active rounded">2</a>
                                         <a href="{{ route('shop3') }}" class="rounded">3</a>
-                                        <a href="/shop?page=4" class="rounded">4</a>
-                                        <a href="/shop?page=5" class="rounded">5</a>
-                                        <a href="/shop?page=6" class="rounded">6</a>
-                                        <a href="/shop?page=next" class="rounded">&raquo;</a>
-                                    </div>
+                                        <a href="{{ route('shop') }}?page=4" class="rounded">4</a>
+                                        <a href="{{ route('shop') }}?page=5" class="rounded">5</a>
+                                        <a href="{{ route('shop') }}?page=6" class="rounded">6</a>
+                                        <a href="{{ route('shop3') }}" class="rounded">&raquo;</a>
                                 </div>
                             </div>
+                        @endif
                         </div>
+                    </div>
 
-                        <!-- List View -->
-                        <div id="tab-6" class="products tab-pane fade show p-0">
-                            <div class="row g-4 products-mini">
-                                <!-- List view products dengan pola yang sama -->
-                            </div>
+                    <!-- List View -->
+                    <div id="tab-6" class="products tab-pane fade show p-0">
+                        <div class="row g-4 products-mini">
+                            <!-- List view products dengan pola yang sama -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Shop Page End -->
-    @endif
-
-                </div> <!-- end .row -->
-            </div> <!-- end .tab-pane -->
-        </div> <!-- end .tab-content -->
-    </div> <!-- end .container -->
-</div> <!-- end .container-fluid -->
+</div>
+<!-- Shop Page End -->
 
 <!-- Product Banner Start -->
-
-    <div class="container-fluid py-5">
+<div class="container-fluid py-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
