@@ -343,8 +343,6 @@
                 <div class="carousel-banner">
                     <div class="carousel-banner-content text-center p-4">
                         <a href="#" class="d-block text-white fs-3">Absolute Specialist Shoes and Bags</a>
-                        <del class="me-2 text-white fs-5">Rp100.000</del>
-                        <span class="text-white fs-5">Rp80.000</span>
                     </div>
                     <a href="{{ route('order.form') }}"
                         class="btn btn-primary rounded-pill align-self-start py-2 px-4">Pickup Now</a>
