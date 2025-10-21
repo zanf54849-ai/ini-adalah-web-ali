@@ -193,44 +193,44 @@
                                 </div>
                             </div>-->
                             <a href="{{ route('contact') }}" class="nav-item nav-link me-2 active">Contact</a>
-                            <div class="nav-item dropdown d-block d-lg-none mb-3">
-                                <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">All
-                                        Category</span></a>
-                                <div class="dropdown-menu m-0">
-                                    <ul class="list-unstyled categories-bars">
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">Accessories</a>
-                                                <span>(3)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">Electronics & Computer</a>
-                                                <span>(5)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">Laptops & Desktops</a>
-                                                <span>(2)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">Mobiles & Tablets</a>
-                                                <span>(8)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">SmartPhone & Smart TV</a>
-                                                <span>(5)</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <!--<div class="nav-item dropdown d-block d-lg-none mb-3">-->
+                            <!--    <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">All-->
+                            <!--            Category</span></a>-->
+                            <!--    <div class="dropdown-menu m-0">-->
+                            <!--        <ul class="list-unstyled categories-bars">-->
+                            <!--            <li>-->
+                            <!--                <div class="categories-bars-item">-->
+                            <!--                    <a href="#">Accessories</a>-->
+                            <!--                    <span>(3)</span>-->
+                            <!--                </div>-->
+                            <!--            </li>-->
+                            <!--            <li>-->
+                            <!--                <div class="categories-bars-item">-->
+                            <!--                    <a href="#">Electronics & Computer</a>-->
+                            <!--                    <span>(5)</span>-->
+                            <!--                </div>-->
+                            <!--            </li>-->
+                            <!--            <li>-->
+                            <!--                <div class="categories-bars-item">-->
+                            <!--                    <a href="#">Laptops & Desktops</a>-->
+                            <!--                    <span>(2)</span>-->
+                            <!--                </div>-->
+                            <!--            </li>-->
+                            <!--            <li>-->
+                            <!--                <div class="categories-bars-item">-->
+                            <!--                    <a href="#">Mobiles & Tablets</a>-->
+                            <!--                    <span>(8)</span>-->
+                            <!--                </div>-->
+                            <!--            </li>-->
+                            <!--            <li>-->
+                            <!--                <div class="categories-bars-item">-->
+                            <!--                    <a href="#">SmartPhone & Smart TV</a>-->
+                            <!--                    <span>(5)</span>-->
+                            <!--                </div>-->
+                            <!--            </li>-->
+                            <!--        </ul>-->
+                            <!--    </div>-->
+                            <!--</div>-->
                         </div>
                         <a href="https://wa.me/628118128571" target="_blank"
                             class="btn btn-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">
