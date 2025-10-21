@@ -239,44 +239,44 @@
                                 </div>
                             </div>-->
                             <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
-                            <div class="nav-item dropdown d-block d-lg-none mb-3">
-                                <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">All
-                                        Category</span></a>
-                                <div class="dropdown-menu m-0">
-                                    <ul class="list-unstyled categories-bars">
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">Accessories</a>
-                                                <span>(3)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">Electronics & Computer</a>
-                                                <span>(5)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">Laptops & Desktops</a>
-                                                <span>(2)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">Mobiles & Tablets</a>
-                                                <span>(8)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">SmartPhone & Smart TV</a>
-                                                <span>(5)</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <!--<div class="nav-item dropdown d-block d-lg-none mb-3">-->
+                            <!--    <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">All-->
+                            <!--            Category</span></a>-->
+                            <!--    <div class="dropdown-menu m-0">-->
+                            <!--        <ul class="list-unstyled categories-bars">-->
+                            <!--            <li>-->
+                            <!--                <div class="categories-bars-item">-->
+                            <!--                    <a href="#">Accessories</a>-->
+                            <!--                    <span>(3)</span>-->
+                            <!--                </div>-->
+                            <!--            </li>-->
+                            <!--            <li>-->
+                            <!--                <div class="categories-bars-item">-->
+                            <!--                    <a href="#">Electronics & Computer</a>-->
+                            <!--                    <span>(5)</span>-->
+                            <!--                </div>-->
+                            <!--            </li>-->
+                            <!--            <li>-->
+                            <!--                <div class="categories-bars-item">-->
+                            <!--                    <a href="#">Laptops & Desktops</a>-->
+                            <!--                    <span>(2)</span>-->
+                            <!--                </div>-->
+                            <!--            </li>-->
+                            <!--            <li>-->
+                            <!--                <div class="categories-bars-item">-->
+                            <!--                    <a href="#">Mobiles & Tablets</a>-->
+                            <!--                    <span>(8)</span>-->
+                            <!--                </div>-->
+                            <!--            </li>-->
+                            <!--            <li>-->
+                            <!--                <div class="categories-bars-item">-->
+                            <!--                    <a href="#">SmartPhone & Smart TV</a>-->
+                            <!--                    <span>(5)</span>-->
+                            <!--                </div>-->
+                            <!--            </li>-->
+                            <!--        </ul>-->
+                            <!--    </div>-->
+                            <!--</div>-->
                         </div>
                         <a href="https://wa.me/628118128571" target="_blank"
                             class="btn btn-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">
@@ -1256,17 +1256,17 @@
                                 <div class="product-item rounded wow fadeInUp" data-wow-delay="0.3s">
                                     <div class="product-item-inner border rounded">
                                         <div class="product-item-inner-item">
-                                            <img src="img/product-15.png" class="img-fluid w-100 rounded-top"
+                                            <img src="img/product-26.png" class="img-fluid w-100 rounded-top"
                                                 alt="Image">
                                             <div class="product-details">
                                                 <a href="#"><i class="fa fa-eye fa-1x"></i></a>
                                             </div>
                                         </div>
                                         <div class="text-center rounded-bottom p-4">
-                                            <a href="#" class="d-block mb-2">SmartPhone</a>
-                                            <a href="#" class="d-block h4">Apple iPad Mini <br> G2356</a>
-                                            <del class="me-2 fs-5">$1,250.00</del>
-                                            <span class="text-primary fs-5">$1,050.00</span>
+                                            <a href="#" class="d-block mb-2">Stroller</a>
+                                            <a href="#" class="d-block h4">Wash Stroller</a>
+                                            <del class="me-2 fs-5">IDR300K</del>
+                                            <span class="text-primary fs-5">IDR250k</span>
                                         </div>
                                     </div>
                                     <div
@@ -1344,17 +1344,17 @@
                                 <div class="product-item rounded wow fadeInUp" data-wow-delay="0.7s">
                                     <div class="product-item-inner border rounded">
                                         <div class="product-item-inner-item">
-                                            <img src="img/product-16.png" class="img-fluid w-100 rounded-top"
+                                            <img src="img/product-19.png" class="img-fluid w-100 rounded-top"
                                                 alt="Image">
                                             <div class="product-details">
                                                 <a href="#"><i class="fa fa-eye fa-1x"></i></a>
                                             </div>
                                         </div>
                                         <div class="text-center rounded-bottom p-4">
-                                            <a href="#" class="d-block mb-2">SmartPhone</a>
-                                            <a href="#" class="d-block h4">Apple iPad Mini <br> G2356</a>
-                                            <del class="me-2 fs-5">$1,250.00</del>
-                                            <span class="text-primary fs-5">$1,050.00</span>
+                                            <a href="#" class="d-block mb-2">Seat</a>
+                                            <a href="#" class="d-block h4">Washing Baby Car Seats</a>
+                                            <del class="me-2 fs-5">IDR250K</del>
+                                            <span class="text-primary fs-5">IDR200K</span>
                                         </div>
                                     </div>
                                     <div
