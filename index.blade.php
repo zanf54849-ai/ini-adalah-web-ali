@@ -6,7 +6,7 @@
 
     <meta charset="utf-8">
     <title>ABSOLUTE 571 PALMERAH - Perawatan Dan Perbaikan Sepatu,Tas,Baby Gears,Aparel Lainnya</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
@@ -46,7 +46,7 @@
 
 
 <!-- Topbar Start -->
-    <div class="container-fluid px-5 d-none border-bottom d-lg-block">
+    <div class="container-fluid px-3 px-lg-5 d-none border-bottom d-lg-block">
         <div class="row gx-0 align-items-center">
             <div class="col-lg-4 text-center text-lg-start mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -101,17 +101,16 @@
             </div>
         </div>
     </div>
-<div class="container-fluid px-5 py-4 d-none d-lg-block">
+<div class="container-fluid px-3 px-lg-5 py-4 d-none d-lg-block">
     <div class="row gx-0 align-items-center text-center">
         <div class="col-md-4 col-lg-3 text-center text-lg-start">
             <div class="d-inline-flex align-items-center">
-                <a href="" class="navbar-brand p-0">
-                    <h2 class="text-primary m-0" style="font-size: 1.75rem; font-weight: 500;">
-                        <img src="img/logo-mobile.jpg" alt="Logo"
-                            style="width:4em; height:4em; object-fit:contain; margin-right:0.5rem; margin-left:-3rem; vertical-align:middle;">
-                        ABSOLUTE 571 PALMERAH
-                    </h2>
-                </a>
+               <!-- GANTI INI -->
+<a href="/" class="navbar-brand d-block d-lg-none">
+    <img src="img/logo-mobile.jpg" alt="Logo"
+        style="width:2.5em; height:2.5em; object-fit:contain; margin-right:0.5rem; vertical-align:middle;">
+    <span class="text-white fw-bold">Absolute 571</span>
+</a>
             </div>
         </div>
 
@@ -168,7 +167,7 @@
 <!-- Topbar End -->
     <!-- Navbar & Hero Start -->
     <div class="container-fluid nav-bar p-0">
-        <div class="row gx-0 bg-primary px-5 align-items-center">
+    <div class="row gx-0 bg-primary px-3 px-lg-5 align-items-center">
             <div class="col-lg-3 d-none d-lg-block">
                 <nav class="navbar navbar-light position-relative" style="width: 250px;">
                     <!-- <button class="navbar-toggler border-0 fs-4 w-100 px-0 text-start" type="button"
@@ -215,11 +214,11 @@
             </div>
             <div class="col-12 col-lg-9">
                 <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
-                    <a href="/" class="navbar-brand d-block d-lg-none">
-                        <img src="img/logo-mobile.jpg" alt="Logo"
-                            style="width:2.5em; height:4em; object-fit:contain; margin-right:0.5rem; margin-left:-3rem; vertical-align:middle;">
-                        <span class="text-white fw-bold">Absolute 571</span>
-                    </a>
+<a href="/" class="navbar-brand d-flex d-lg-none align-items-center">
+    <img src="img/logo-mobile.jpg" alt="Logo"
+        style="width:2.5em; height:2.5em; object-fit:contain; margin:0; vertical-align:middle;">
+    <span class="text-white fw-bold ms-2" style="font-size:0.9rem;">Absolute 571</span>
+</a>
 
                     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse">
@@ -278,6 +277,9 @@
                             <!--    </div>-->
                             <!--</div>-->
                         </div>
+                        <a href="{{ route('shop') }}" class="btn btn-light rounded-pill py-2 px-3 d-lg-none me-2">
+        <i class="fas fa-search"></i>
+    </a>
                         <a href="https://wa.me/628118128571" target="_blank"
                             class="btn btn-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">
                             <i class="fa fa-mobile-alt me-2"></i> 0811-8128-571
@@ -2180,7 +2182,7 @@
                         </div>
                         <div>
                             <h4 class="text-white">Alamat</h4>
-                            <p class="mb-2">Jl.Kyai H.Taisir No.7,RT.1/RW.12,Palmerah,Kec.Palmerah,Jakarta Barat</p>
+                            <p class="mb-2">Jl. Kyai H. Taisir No.7, RT.1/RW.12, Palmerah, Kec. Palmerah, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11480,Indonesia</p>
                         </div>
                     </div>
                 </div>
@@ -2192,7 +2194,7 @@
                         </div>
                         <div>
                             <h4 class="text-white">Mail Us</h4>
-                            <p class="mb-2">571absolutepalmerah@gmail.com</p>
+                            <p class="mb-2">absolutespecialist571@gmail.com</p>
                         </div>
                     </div>
                 </div>
